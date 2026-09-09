@@ -3,19 +3,19 @@ describe('POST /usuarios da ServeRest', () => {
 
   const users = [
     {
-      nome: 'Lucas',
+      nome: 'Lucas Assis',
       email: `lucas${timestamp}@teste.com`,
       password: '123456',
       administrador: 'true'
     },
     {
-      nome: 'Isaac',
+      nome: 'Isaac Rafael',
       email: `isaac${timestamp + 1}@teste.com`,
       password: '123456',
       administrador: 'true'
     },
     {
-      nome: 'Yohan',
+      nome: 'Yohan Luca',
       email: `yohan${timestamp + 2}@teste.com`,
       password: '123456',
       administrador: 'true'

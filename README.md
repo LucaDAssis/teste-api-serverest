@@ -105,9 +105,40 @@ npx cypress open
 - validação contínua do comportamento da API
 - facilidade de automação em pipelines de CI/CD
 
+## Metodologia de colaboração com IA
+
+Este projeto foi desenvolvido com uma abordagem de colaboração entre pessoas e inteligência artificial, seguindo um processo prático e orientado a resultados:
+
+- a IA foi utilizada para auxiliar na geração de cenários de teste
+- a validação da estrutura da API foi revisada e ajustada manualmente
+- os testes foram refinados com foco em clareza, manutenção e cobertura real de comportamento
+- a automação foi executada e validada em ambiente real para verificar a consistência da solução
+
+Essa abordagem reforça a combinação entre conhecimento técnico humano e aceleração de produtividade promovida pela IA, mantendo a responsabilidade de revisão e garantia de qualidade do time.
+
+## Fluxo de trabalho
+
+1. analisar a documentação da API
+2. identificar os endpoints e regras de negócio relevantes
+3. propor cenários de teste com apoio de IA
+4. validar a estrutura da resposta real da API
+5. automatizar os testes em Cypress
+6. executar os testes e revisar os resultados
+7. documentar o processo e o estado da solução
+
+## Evidência de execução
+
+Os testes foram executados com sucesso no terminal, com retorno positivo:
+
+- `GET /usuarios` retornando status 200
+- `POST /usuarios` retornando status 201
+- resultados finais com testes aprovados
+
+Esse histórico representa uma prova de conceito de uso de IA como suporte na criação e revisão de testes de API, sempre com validação humana e execução prática.
+
 ## Conclusão
 
-Este projeto demonstra uma abordagem prática de automação de testes de API utilizando Cypress, com foco em robustez, clareza e facilidade de execução. Ele pode ser utilizado como base para testes mais complexos, incluindo cenários de validação, criação, atualização e exclusão de dados.
+Este projeto demonstra uma abordagem prática de automação de testes de API utilizando Cypress, com foco em robustez, clareza e facilidade de execução. Ele também evidencia uma prática moderna de desenvolvimento colaborativo, em que inteligência artificial e conhecimento humano atuam juntos para acelerar a entrega, com validação e garantia de qualidade no processo.
 
 ## Autor
 
