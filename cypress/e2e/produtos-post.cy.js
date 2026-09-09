@@ -28,10 +28,22 @@ describe('POST /produtos da ServeRest', () => {
       quantidade: 12
     },
     {
-      nome: `FIFA 25 ${timestamp}`,
+      nome: `NFL ${timestamp}`,
+      preco: 199,
+      descricao: 'Jogo de futebol americano com licenciamento NFL',
+      quantidade: 18
+    },
+    {
+      nome: `NBA ${timestamp}`,
+      preco: 229,
+      descricao: 'Jogo de basquete com atletas e times da NBA',
+      quantidade: 16
+    },
+    {
+      nome: `EASPORTS 26 ${timestamp}`,
       preco: 299,
-      descricao: 'Jogo eletrônico de futebol EA Sports FC 25',
-      quantidade: 15
+      descricao: 'Próxima edição de football da EA Sports',
+      quantidade: 14
     },
     {
       nome: `SPIDER-MAN 2 ${timestamp}`,
