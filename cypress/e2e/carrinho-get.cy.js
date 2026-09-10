@@ -8,6 +8,33 @@ describe('GET /carrinhos da ServeRest', () => {
     administrador: 'true'
   }
 
+  const productsToCreate = [
+    {
+      nome: `PS5 ${timestamp}`,
+      preco: 4500,
+      descricao: 'Console Sony PlayStation 5',
+      quantidade: 10
+    },
+    {
+      nome: `GOD OF WAR ${timestamp}`,
+      preco: 259,
+      descricao: 'Jogo de ação e aventura inspirado em mitologia',
+      quantidade: 12
+    },
+    {
+      nome: `THE LAST OF US ${timestamp}`,
+      preco: 219,
+      descricao: 'Jogo de sobrevivência em mundo pós-apocalíptico',
+      quantidade: 8
+    },
+    {
+      nome: `WARFRAME PLATINUM ${timestamp}`,
+      preco: 29,
+      descricao: 'Pacote de Platinum para o jogo Warframe',
+      quantidade: 40
+    }
+  ]
+
   let authToken = ''
   let cartId = ''
   let productIds = {}
@@ -26,6 +53,18 @@ describe('GET /carrinhos da ServeRest', () => {
         expect(response.status).to.eq(200)
         authToken = response.body.authorization
 
+        productsToCreate.forEach((product) => {
+          cy.request({
+            method: 'POST',
+            url: `${Cypress.config('baseUrl')}/produtos`,
+            headers: { authorization: authToken },
+            body: product
+          }).then((res) => {
+            expect(res.status).to.eq(201)
+          })
+        })
+      })
+      .then(() => {
         return cy.request({
           method: 'GET',
           url: `${Cypress.config('baseUrl')}/produtos`,
